@@ -1,0 +1,538 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desplazamiento suave en toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado (sin cambios) */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(139, 69, 19, 0.85);
+    z-index: 1000;
+    padding: 70px 30px;
+    height: 100px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    margin-right: 20px;
+}
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #fff;
+}
+
+.nav-contact {
+    text-align: right;
+}
+
+.phone {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.phone-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 4px solid #271601;
+    border-radius: 25px;
+    background-color: transparent;
+    position: relative;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav ul li a:hover {
+    background-color: #000000;
+    color: #F5D0A9;
+    animation: buttonPulse 1.2s ease infinite;
+}
+
+nav ul li a.active {
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+    color: #F5D0A9;
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #F5D0A9;
+    border-radius: 2px;
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 0 0 rgba(139, 69, 19, 0.5);
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(139, 69, 19, 0.8);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 0 0 rgba(139, 69, 19, 0.5);
+    }
+}
+
+
+/* Sección Inicio */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/panes-mexicanos.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -30%;
+    width: 60%; /* Media área desde la derecha */
+    height: 100%;
+    background: linear-gradient(to bottom left, rgba(111, 110, 110, 0), transparent); /* Blanco desvanecido diagonal */
+    transform: skewX(-30deg); /* Diagonal hacia la izquierda */
+    transform-origin: top right;
+    z-index: 0;
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+    max-width: 60%;
+    border: 8px solid #3b1a03; /* Borde café */
+    padding: 20px; /* Espacio interno */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.hero-content h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 70px; /* Texto grande para el eslogan */
+    color: #1A1A1A; /* Negro para contraste */
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-content h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px; /* Tamaño para el subtítulo */
+    color: #1A1A1A;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.order-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background-color: #8B4513; /* Café */
+    border: 2px solid #8B4513;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    
+}
+
+.order-btn:hover {
+    background-color: #1A1A1A; /* Negro al hover */
+    border-color: #1A1A1A;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para otras secciones */
+.section {
+    height: 100vh;
+    padding: 120px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #8B4513;
+}
+
+.section p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #1A1A1A;
+}
+
+/* Sección Acerca de */
+.about-section {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/pan-dulce-final.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+.about-image {
+    width: 50%;
+    background-image: url('../assets/hq720.jpg'); /* Imagen de ejemplo */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Imagen circular */
+    max-width: 450px; /* Tamaño máximo del círculo */
+    height: 450px; /* Altura fija para el círculo */
+    border: 8px solid #3b1a03; /* Borde café */
+    margin: auto 0 auto 50px; /* Centrado vertical y margen izquierdo */
+}
+
+.about-content {
+    width: 50%;
+    background-color: #F5D0A9; /* Color sólido crema */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.about-content h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #8B4513;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #1A1A1A;
+    line-height: 1.6;
+}
+
+/* Sección Servicios */
+.services-section {
+    height: 100vh;
+    background-color: #f9f9f9; /* Fondo sólido claro */
+    padding: 120px 20px; /* Espacio para no chocar con el header */
+    text-align: center;
+}
+
+.services-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #8B4513;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    background-color: #fff;
+    border: 2px solid #8B4513;
+    border-radius: 10px;
+    padding: 20px;
+    width: 22%; /* 4 recuadros en una fila */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-box h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
+}
+
+/* Sección Categorías */
+.categories-section {
+    height: 100vh;
+    background-color: #F5D0A9; /* Fondo sólido crema */
+    padding: 120px 20px;
+    text-align: center;
+    overflow: hidden; /* Evita desbordamiento */
+}
+
+.categories-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #8B4513;
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 450px; /* Altura fija para contener imágenes más grandes */
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+    transition: transform 0.5s ease;
+    width: max-content; /* Permite que el carrusel sea tan ancho como sus ítems */
+}
+
+.carousel-item {
+    flex: 0 0 400px; /* Ancho fijo */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05); /* Aumenta ligeramente al pasar el cursor */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.carousel-item h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px; /* Título más grande */
+    color: #1A1A1A;
+}
+
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.carousel-prev {
+    left: -60px; /* Fuera del carrusel a la izquierda */
+}
+
+.carousel-next {
+    right: -60px; /* Fuera del carrusel a la derecha */
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: #1A1A1A;
+}
+
+/* Sección Contactar */
+.contact-section {
+    height: 100vh;
+    background-color: #4A2F1F; /* Fondo ligeramente oscuro (marrón oscuro) */
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #F5D0A9; /* Crema para contraste */
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #F5D0A9;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #1A1A1A;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background-color: #8B4513;
+    border: 2px solid #8B4513;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: #1A1A1A; /* Negro completo */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #F5D0A9; /* Crema para los íconos */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #8B4513; /* Café al pasar el cursor */
+}

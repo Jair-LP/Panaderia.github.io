@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <title>Lista de Productos - Panadería Delicia</title>
+</head>
+
+<body>
+    <!-- Botón de regreso -->
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</a>
+
+    <!-- Botón del carrito -->
+    <button class="cart-btn"><i class="fas fa-shopping-basket"></i> <span class="cart-count">0</span></button>
+
+    <!-- Ventana del carrito -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <h2>Carrito de Compras</h2>
+            <ul class="cart-list" id="cartList"></ul>
+            <p id="cartEmpty">El carrito está vacío.</p>
+            <div class="cart-actions">
+                <button class="order-btn" id="orderBtn">Ordenar</button>
+                <button class="close-cart" id="closeCart">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana del formulario de orden -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-content">
+            <h2>Completa tu orden</h2>
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Número de teléfono:</label>
+                    <input type="tel" id="phone" name="phone" pattern="^\+\d{10,15}$" placeholder="ej. +1234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Enviar Orden</button>
+                    <button type="button" class="cancel-btn" id="cancelOrder">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lista de productos -->
+    <section class="products-section">
+        <h1>Lista de Productos</h1>
+        <div class="products-container">
+            <div class="product-card">
+                <img src="assets/productos/banco-pan.jpg" alt="Pan Blanco">
+                <h2>Pan Blanco</h2>
+                <p>Tipo: Pan Salado</p>
+                <button class="add-btn" data-name="Pan Blanco" data-type="Pan Salado">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/concha.jpg" alt="Concha">
+                <h2>Concha</h2>
+                <p>Tipo: Pan Dulce</p>
+                <button class="add-btn" data-name="Concha" data-type="Pan Dulce">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/pastel-chocolate.jpg" alt="Pastel de Chocolate">
+                <h2>Pastel de Chocolate</h2>
+                <p>Tipo: Pastel</p>
+                <button class="add-btn" data-name="Pastel de Chocolate" data-type="Pastel">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/pizza-pepperoni.jpeg" alt="Pizza Pepperoni">
+                <h2>Pizza Pepperoni</h2>
+                <p>Tipo: Pizza</p>
+                <button class="add-btn" data-name="Pizza Pepperoni" data-type="Pizza">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/panquejpg.jpg" alt="Panqué de Vainilla">
+                <h2>Panqué de Vainilla</h2>
+                <p>Tipo: Panqué</p>
+                <button class="add-btn" data-name="Panqué de Vainilla" data-type="Panqué">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/pan-blanco.jpg" alt="Bolillo">
+                <h2>Bolillo</h2>
+                <p>Tipo: Pan Salado</p>
+                <button class="add-btn" data-name="Bolillo" data-type="Pan Salado">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/horejajpg.jpg" alt="Oreja">
+                <h2>Oreja</h2>
+                <p>Tipo: Pan Dulce</p>
+                <button class="add-btn" data-name="Oreja" data-type="Pan Dulce">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/pastel-fresa.jpg" alt="Pastel de Fresa">
+                <h2>Pastel de Fresa</h2>
+                <p>Tipo: Pastel</p>
+                <button class="add-btn" data-name="Pastel de Fresa" data-type="Pastel">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/pizza-queso.jpg" alt="Pizza de Queso">
+                <h2>Pizza de Queso</h2>
+                <p>Tipo: Pizza</p>
+                <button class="add-btn" data-name="Pizza de Queso" data-type="Pizza">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/panque-chocolate.jpg" alt="Panqué de Chocolate">
+                <h2>Panqué de Chocolate</h2>
+                <p>Tipo: Panqué</p>
+                <button class="add-btn" data-name="Panqué de Chocolate" data-type="Panqué">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/telera.jpg" alt="Telera">
+                <h2>Telera</h2>
+                <p>Tipo: Pan Salado</p>
+                <button class="add-btn" data-name="Telera" data-type="Pan Salado">Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/productos/donas.jpg" alt="Donas">
+                <h2>Donas</h2>
+                <p>Tipo: Pan Dulce</p>
+                <button class="add-btn" data-name="Donas" data-type="Pan Dulce">Agregar</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/productos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+/* Responsividad para pantallas menores a 768px */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-contact {
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .phone {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .phone-icon {
+        font-size: 20px;
+    }
+
+    /* Inicio */
+    .hero-section::before {
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+    }
+
+    .hero-content {
+        right: 0;
+        max-width: 90%;
+        padding: 15px;
+        border: 2px solid #8B4513;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    .hero-content h3 {
+        font-size: 16px;
+    }
+
+    .order-btn {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    /* Categorías */
+    .categories-section {
+        padding: 100px 20px;
+        height: auto;
+    }
+
+    .categories-section h2 {
+        font-size: 28px;
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+    .carousel {
+        gap: 20px;
+    }
+
+    .carousel-item {
+        flex: 0 0 300px;
+    }
+
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .carousel-item h3 {
+        font-size: 20px;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    /* Acerca de */
+    .about-section {
+        flex-direction: column;
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        margin: 0 auto 20px;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    /* Servicios */
+    .services-section {
+        padding: 100px 20px;
+        height: auto;
+    }
+
+    .services-section h2 {
+        font-size: 28px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Contactar */
+    .contact-section {
+        padding: 100px 20px;
+        height: auto;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}

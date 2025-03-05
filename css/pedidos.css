@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.orders-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.orders-section h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #8B4513;
+    margin-bottom: 40px;
+}
+
+#ordersTable {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#ordersTable th,
+#ordersTable td {
+    padding: 15px;
+    border: 2px solid #8B4513;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #1A1A1A;
+}
+
+#ordersTable th {
+    background-color: #F5D0A9;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+}
+
+#ordersTable td {
+    background-color: #fff;
+}

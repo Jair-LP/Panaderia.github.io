@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Panadería Delicia</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="assets/icon_pan.png" alt="Logo Panadería Delicia" class="logo">
+                <h1>Panadería Delicia</h1>
+            </div>
+            <div class="nav-contact">
+                <div class="phone">
+                    <span class="phone-icon"><i class="fas fa-phone"></i></span>
+                    <span>+123 456 7890</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#Categoria">Categoría</a></li>
+                        <li><a href="#acerca">Acerca de</a></li>
+                        <li><a href="#contactar">Contactar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h2>El sabor que une corazones</h2>
+            <h3>"En Panadería Delicia, 
+                te ofrecemos productos frescos y artesanales, 
+                hechos con cariño para que disfrutes de cada bocado."</h3>
+            <a href="producs.html">
+                <button class="order-btn">Ordenar</button>
+            </a>
+        </div>
+    </section>
+
+    <section id="acerca" class="about-section">
+        <div class="about-image"></div>
+        <div class="about-content">
+            <h2>Acerca de nosotros</h2>
+            <p>Panadería Delicia nació hace más de 20 años con la pasión de ofrecer panes y postres artesanales. Usamos ingredientes frescos y recetas tradicionales para llevar felicidad a cada hogar. ¡Nuestra misión es endulzar tu día!</p>
+        </div>
+    </section>
+
+    <section id="servicios" class="services-section">
+        <h2>Nuestros servicios</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <h3>Panes</h3>
+                <p>Panes frescos diarios, desde tradicionales hasta especiales.</p>
+            </div>
+            <div class="service-box">
+                <h3>Postres</h3>
+                <p>Delicias dulces para cualquier ocasión.</p>
+            </div>
+            <div class="service-box">
+                <h3>Pasteles</h3>
+                <p>Pasteles personalizados para tus eventos.</p>
+            </div>
+            <div class="service-box">
+                <h3>Pizzas</h3>
+                <p>Pizzas artesanales con ingredientes frescos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Categoria" class="categories-section">
+        <h2>Categorías</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="assets/pan_blanco.jpg" alt="Pan Blanco">
+                    <h3>Pan Blanco</h3>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pandulce.jpg" alt="Pan Dulce">
+                    <h3>Pan Dulce</h3>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pastel.jpg" alt="Pastel">
+                    <h3>Pastel</h3>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pizaa.jpg" alt="Pizzas">
+                    <h3>Pizzas</h3>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/panques.jpg" alt="Panqués">
+                    <h3>Panqués</h3>
+                </div>
+            </div>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Sección Contactar -->
+    <section id="contactar" class="contact-section">
+        <h2>Contactar</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad Delicia</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@panaderiadelicia.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Panadería Delicia. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
